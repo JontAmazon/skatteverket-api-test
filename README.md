@@ -2,31 +2,19 @@
 
 ## Requirements
 - JDK 17
-- Maven 3.9+ (or IntelliJ's bundled Maven)
-  - can I remove this requirement now? after having added an mvn wrapper...
 
-## Build
+## Setup
+Run this Maven Wrapper script. It downloads and runs Maven version 3.9.9, and runs all tests.
 ```bash
-mvn -q -DskipTests package
-```
-
-## Run Tests
-Run all tests:
-```bash
-mvn -q test
-```
-
-Run a single test:
-```bash
-mvn -q -Dtest=PingGoogleTest test
+./mvnw test      # Unix/macOS
+.\mvnw.cmd test  # Windows
 ```
 
 ## Implemented Tests
-- Todo later...
-
+- TODO later, when I say.
 
 ## Assumptions
-- blabla
+- TODO later, when I say.
 
 
 
