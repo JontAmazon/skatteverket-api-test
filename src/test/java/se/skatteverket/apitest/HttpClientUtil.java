@@ -19,6 +19,7 @@ final class HttpClientUtil {
     static HttpRequest buildGet(URI uri, Duration timeout) {
         return HttpRequest.newBuilder(uri)
                 .timeout(timeout)
+                .header("User-Agent", "skatteverket-api-test-suite/1.0")
                 .GET()
                 .build();
     }

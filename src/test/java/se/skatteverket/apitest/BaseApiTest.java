@@ -8,9 +8,10 @@ abstract class BaseApiTest {
     protected static final String BASE_URL = "https://skatteverket.entryscape.net/rowstore";
     protected static final Duration CONNECT_TIMEOUT = Duration.ofSeconds(10);
     protected static final Duration REQUEST_TIMEOUT = Duration.ofSeconds(20);
+    private static final HttpClient CLIENT = HttpClientUtil.createClient(CONNECT_TIMEOUT);
 
     protected HttpClient httpClient() {
-        return HttpClientUtil.createClient(CONNECT_TIMEOUT);
+        return CLIENT;
     }
 
     protected URI buildUri(String path) {
