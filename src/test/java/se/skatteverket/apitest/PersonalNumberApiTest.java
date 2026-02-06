@@ -4,13 +4,17 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
 import java.util.regex.Pattern;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import se.skatteverket.apitest.util.AssertionsUtil;
+import se.skatteverket.apitest.util.RequestResponseLogUtil;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PersonalNumberApiTest extends BaseApiTest {
+    private static final Logger LOGGER = Logger.getLogger(PersonalNumberApiTest.class.getName());
     private static final Pattern PERSONAL_NUMBER_PATTERN =
             Pattern.compile("\\b(?:\\d{6}|\\d{8})[-+]?\\d{4}\\b");
 
@@ -23,6 +27,7 @@ class PersonalNumberApiTest extends BaseApiTest {
                 HttpClientUtil.buildGet(uri, REQUEST_TIMEOUT),
                 HttpResponse.BodyHandlers.ofString()
         );
+        LOGGER.log(Level.FINE, () -> RequestResponseLogUtil.format(response, 500));
 
         String body = response.body();
         AssertionsUtil.assertStatus(response, 200);
