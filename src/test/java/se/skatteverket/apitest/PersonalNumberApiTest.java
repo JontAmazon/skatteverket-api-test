@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 
-class TestPersonalNumberApiTest extends BaseApiTest {
+class PersonalNumberApiTest extends BaseApiTest {
     private static final Pattern PERSONAL_NUMBER_PATTERN =
             Pattern.compile("\\b(?:\\d{6}|\\d{8})[-+]?\\d{4}\\b");
 
