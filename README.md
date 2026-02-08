@@ -1,6 +1,7 @@
 # Mini Test Suite for Skatteverket's Test Personal Number API
 Note about [the API](https://www7.skatteverket.se/portal/apier-och-oppna-data/utvecklarportalen/oppetdata/Test%C2%AD%C2%ADpersonnummer):
-It provides test personal numbers for developers; 1 test personal number per date of birth (from 1890 until 2025).
+It provides test personal numbers for developers; at least 1 test personal number per date of birth (from 1890 until 2025). 
+Usually 2 per date of birth (one male, one female), but sometimes only 1, IINM.
 
 ## Requirements
 - JDK 17
@@ -14,17 +15,21 @@ mvnw.cmd test  # Windows
 
 ## Assumptions
 
-
 ### Assumptions about API Usage
-The chosen tests were based on assumptions of the API Usage.
-
-TODO later: continue here, when I say.
-
+I'm guessing the most common use case of the API is that a developer needs a virtual person object 
+with a specific date of birth. Thus, I thought this was the most critical feature of the API, 
+motivating my choice of happy case test scenario.
 
 
 
 ## Implemented Tests + What They Verify
 - TODO later, when I say.
+
+
+
+# happy case - what does it verify
+- also _limit?
+
 
 
 

@@ -6,7 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 public final class HttpLogUtil {
+    private static final int DEFAULT_MAX_BODY_CHARS = 500;
+
     private HttpLogUtil() {
+    }
+
+    public static String format(HttpResponse<String> response) {
+        return format(response, DEFAULT_MAX_BODY_CHARS);
     }
 
     public static String format(HttpResponse<String> response, int maxBodyChars) {
