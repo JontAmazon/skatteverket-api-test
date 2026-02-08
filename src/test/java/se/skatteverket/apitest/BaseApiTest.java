@@ -18,11 +18,6 @@ abstract class BaseApiTest {
         try {
             Path logDir = Paths.get("target", "test-logs");
             Files.createDirectories(logDir);
-            try (var stream = Files.newDirectoryStream(logDir, "api-tests.*")) {
-                for (Path path : stream) {
-                    Files.deleteIfExists(path);
-                }
-            }
         } catch (IOException e) {
             throw new IllegalStateException("Failed to create target/test-logs directory", e);
         }

@@ -1,7 +1,7 @@
 package se.skatteverket.apitest.util;
 
-public final class TestTextUtil {
-    private TestTextUtil() {
+public final class TextUtil {
+    private TextUtil() {
     }
 
     public static String snippet(String body, int maxChars) {

@@ -13,7 +13,7 @@ public final class AssertionsUtil {
         Assertions.assertEquals(
                 expectedStatus,
                 actualStatus,
-                "Unexpected status code. Body snippet: " + TestTextUtil.snippet(body, 300)
+                "Unexpected status code. Body snippet: " + TextUtil.snippet(body, 300)
         );
     }
 }

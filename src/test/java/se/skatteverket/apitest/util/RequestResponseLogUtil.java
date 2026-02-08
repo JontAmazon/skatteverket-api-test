@@ -31,7 +31,7 @@ public final class RequestResponseLogUtil {
                 .append(System.lineSeparator());
         appendHeaders(sb, response.headers().map());
         sb.append("Body snippet: ")
-                .append(TestTextUtil.snippet(response.body(), maxBodyChars));
+                .append(TextUtil.snippet(response.body(), maxBodyChars));
 
         return sb.toString();
     }
