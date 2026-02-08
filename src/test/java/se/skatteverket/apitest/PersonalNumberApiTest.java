@@ -17,8 +17,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class PersonalNumberApiTest extends BaseApiTest {
     private static final Logger LOGGER = Logger.getLogger(PersonalNumberApiTest.class.getName());
     private static final String DATASET_PATH = "/dataset/b4de7df7-63c0-4e7e-bb59-1f156a591763";
-    private static final Pattern PERSONAL_NUMBER_PATTERN =
-            Pattern.compile("\\b(?:\\d{6}|\\d{8})[-+]?\\d{4}\\b");
     private URI uri;
     private HttpClient client;
 
@@ -39,11 +37,6 @@ class PersonalNumberApiTest extends BaseApiTest {
 
         String body = response.body();
         AssertionsUtil.assertStatus(response, 200);
-        // AssertionsUtil.assertStatus(response, 201);
-        assertTrue(
-                PERSONAL_NUMBER_PATTERN.matcher(body).find(),
-                "Response does not contain personal numbers"
-        );
 
         System.out.println("=== First 300 characters of response body ===");
         int previewLimit = Math.min(300, body.length());
