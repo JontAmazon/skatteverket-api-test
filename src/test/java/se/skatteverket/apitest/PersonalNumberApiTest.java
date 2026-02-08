@@ -44,6 +44,10 @@ class PersonalNumberApiTest extends BaseApiTest {
                 PERSONAL_NUMBER_PATTERN.matcher(body).find(),
                 "Response does not contain personal numbers"
         );
+
+        System.out.println("=== First 300 characters of response body ===");
+        int previewLimit = Math.min(300, body.length());
+        System.out.println(body.substring(0, previewLimit));
     }
 
 }

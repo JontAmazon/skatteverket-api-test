@@ -1,5 +1,6 @@
 my-notes
 my-todos
+my-reasoning
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
