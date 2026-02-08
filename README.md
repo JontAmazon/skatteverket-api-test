@@ -23,12 +23,15 @@ motivating my choice of happy case test scenario.
 
 
 ## Implemented Tests + What They Verify
-- TODO later, when I say.
 
+# Happy case
+Filter on testpersonnummer to get 1+ test persons with a specific date of birth (always constant).
 
-
-# happy case - what does it verify
-- also _limit?
+What we verify:
+- the API returns 200
+- the API returns results (test personal numbers)
+- the filtering functionality works
+- the response body is valid json
 
 
 
