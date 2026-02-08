@@ -16,8 +16,8 @@ import se.skatteverket.apitest.util.TextUtil;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PersonalNumberApiTest extends BaseApiTest {
-    private static final Logger LOGGER = Logger.getLogger(PersonalNumberApiTest.class.getName());
+class TestPersonalNumberApiTest extends BaseApiTest {
+    private static final Logger LOGGER = Logger.getLogger(TestPersonalNumberApiTest.class.getName());
     private static final String DATASET_PATH = "/dataset/b4de7df7-63c0-4e7e-bb59-1f156a591763";
     private static final ObjectMapper MAPPER = new ObjectMapper();
     private final HttpClient client = httpClient();
