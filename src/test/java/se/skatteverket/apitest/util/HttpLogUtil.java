@@ -5,8 +5,8 @@ import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
 
-public final class RequestResponseLogUtil {
-    private RequestResponseLogUtil() {
+public final class HttpLogUtil {
+    private HttpLogUtil() {
     }
 
     public static String format(HttpResponse<String> response, int maxBodyChars) {

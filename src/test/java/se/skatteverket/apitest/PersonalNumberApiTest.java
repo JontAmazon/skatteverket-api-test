@@ -10,7 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import se.skatteverket.apitest.util.AssertionsUtil;
-import se.skatteverket.apitest.util.RequestResponseLogUtil;
+import se.skatteverket.apitest.util.HttpLogUtil;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -33,7 +33,7 @@ class PersonalNumberApiTest extends BaseApiTest {
                 HttpClientUtil.buildGet(uri, REQUEST_TIMEOUT),
                 HttpResponse.BodyHandlers.ofString()
         );
-        LOGGER.log(Level.FINE, () -> RequestResponseLogUtil.format(response, 500));
+        LOGGER.log(Level.FINE, () -> HttpLogUtil.format(response, 500));
 
         String body = response.body();
         AssertionsUtil.assertStatus(response, 200);
