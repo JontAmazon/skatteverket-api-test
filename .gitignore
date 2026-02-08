@@ -1,6 +1,7 @@
 my-notes
 my-todos
 my-reasoning
+my-tmp-code
 
 target/
 !.mvn/wrapper/maven-wrapper.jar

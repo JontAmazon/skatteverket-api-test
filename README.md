@@ -20,12 +20,10 @@ I'm guessing the most common use case of the API is that a developer needs a vir
 with a specific date of birth. Thus, I thought this was the most critical feature of the API, 
 motivating my choice of happy case test scenario.
 
+# Implemented Happy Case Test
+**filtersByBirthdate_returnsResults:**
 
-
-## Implemented Tests + What They Verify
-
-# Happy case
-Filter on testpersonnummer to get 1+ test persons with a specific date of birth (always constant).
+Filter by testpersonnummer to match a specific date of birth (constant, always the same). Assert at least one match.
 
 What we verify:
 - the API returns 200
@@ -34,5 +32,8 @@ What we verify:
 - the response body is valid json
 
 
+## Implemented Negative Test Case
+**limitAboveMaxCapsToMax:**
 
+Given a huge input value for _limit, verify the API caps it to the default/max cap value.
 
