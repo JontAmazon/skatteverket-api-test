@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
 import se.skatteverket.apitest.util.AssertionsUtil;
+import se.skatteverket.apitest.util.HttpClientUtil;
 import se.skatteverket.apitest.util.HttpLogUtil;
 import se.skatteverket.apitest.util.TextUtil;
 

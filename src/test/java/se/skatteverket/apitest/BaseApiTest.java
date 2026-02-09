@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.io.IOException;
+import se.skatteverket.apitest.util.HttpClientUtil;
 
 abstract class BaseApiTest {
     protected static final String BASE_URL = "https://skatteverket.entryscape.net/rowstore";
